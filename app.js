@@ -2,32 +2,36 @@
 const requiredSum = 8;
 //arrays de ejemplo
 const arr = [1, 2, 4, 4];
-//const arr = [3,6,18,8,14,6,17,17,3,7,12,19,19,10,6,6,19,11,8,10]
+//const arr = [3,6,18,8,14,6,17,17,3,7,12,19,19,10,6,6,19,11,8,10];
 //const arr = Array.from({length: 10}, () => Math.floor(Math.random() * 20));
-console.dir(arr, {'maxArrayLength': null});
+//console.dir(arr, {'maxArrayLength': null});
 
 //----------Solución menos óptima----------//
 
-console.time('Execution time getRegularSum')
+console.time('Execution time getRegularSum');
+
 function getRegularSum (array, sum) {
-    //iteramos el array dado desde su índice cero hasta el final
-    for (let i = 0; i < array.length; i++) {
-        //iteramos el array por segunda vez comenzando desde su índice +1
-        //para comparar el primer valor con el segundo y el último con el primero
-        for (let j = i + 1; j < array.length; j++) {
-          //sumamos los valores de cada array para ver si coincide con la suma dada
-          //si existe suma retorna true, de lo contrario, false
-          if (array[i] + array[j] === sum) return true
-        }
+  //iteramos el array dado desde su índice cero hasta el final
+  for (let i = 0; i < array.length; i++) {
+    //iteramos el array por segunda vez comenzando desde su índice +1
+    //para comparar el primer valor con el segundo y el último con el primero
+    for (let j = i + 1; j < array.length; j++) {
+      //sumamos los valores de los ítems iterados para ver si coinciden con la suma dada
+      //si existe suma retorna true, de lo contrario, false
+      if (array[i] + array[j] === sum) return true
     }
-    return false
+  }
+  return false
 }
-console.timeEnd('Execution time getRegularSum')
-console.log('getRegularSum: ', getRegularSum(arr, requiredSum))
+
+console.timeEnd('Execution time getRegularSum');
+console.log('getRegularSum: ', getRegularSum(arr, requiredSum));
+
 
 //----------Solución más óptima----------//
 
-console.time("Execution time getOptimalSum");
+console.time('Execution time getOptimalSum');
+
 function getOptimalSum(arr, sum) {
   //primero ordeno el array para que las operaciones sean más fluidas
   const sortedArr = arr.sort((a, b) => a - b )
@@ -61,5 +65,6 @@ function getOptimalSum(arr, sum) {
   }
   return false
 }
-console.timeEnd("Execution time getOptimalSum");
-console.log("getOptimalSum: ", getOptimalSum(arr, requiredSum));
+
+console.timeEnd('Execution time getOptimalSum');
+console.log('getOptimalSum: ', getOptimalSum(arr, requiredSum));

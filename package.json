@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node app.js",
-    "watch": "nodemon server.js",
+    "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/deborolon/comparacion-de-algoritmos/issues"
   },
-  "homepage": "https://github.com/deborolon/comparacion-de-algoritmos#readme"
+  "homepage": "https://github.com/deborolon/comparacion-de-algoritmos#readme",
+  "dependencies": {
+    "nodemon": "^3.0.3"
+  }
 }

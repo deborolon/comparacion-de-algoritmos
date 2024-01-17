@@ -21,7 +21,7 @@ importante es realizar el desarrollo en el menor tiempo posible.
 que el tiempo de ejecución si importa y que el tiempo de desarrollo no es importante.
 
 
-## Para probar las distintas soluciones
+## Para probar las distintas soluciones necesitarás instalar v20.5.1 de Nodejs.
 
 En el directorio del proyecto, podés correr:
 

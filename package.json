@@ -1,0 +1,26 @@
+{
+  "name": "comparacion-de-algoritmos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "watch": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deborolon/comparacion-de-algoritmos.git"
+  },
+  "keywords": [
+    "javascript",
+    "nodejs"
+  ],
+  "author": "Debo Rolon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deborolon/comparacion-de-algoritmos/issues"
+  },
+  "homepage": "https://github.com/deborolon/comparacion-de-algoritmos#readme"
+}
